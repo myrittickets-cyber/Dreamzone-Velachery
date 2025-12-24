@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamzone Velachery - Transforming Passion into Profession</title>
+    <meta name="description"
+        content="DreamZone Velachery - Chennai's leading creative design academy offering professional courses in Fashion Design, Interior Design, Graphic Design, and Animation.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/modal-elegant.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">`r`n
+    <link rel="stylesheet" href="assets/css/contact-popup.css">
+    <link rel="stylesheet" href="assets/css/gallery-popup.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="assets/images/logo/logo.png" alt="Dreamzone Logo">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="has-dropdown">
+                            <a href="#interior">Interior Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Master-Interior.html">Master Diploma in Interior Architecture & Design</a>
+                                </li>
+                                <li><a href="Executive-Interior.html">Executive Diploma In Interior Architecture &
+                                        Design</a></li>
+                                <li><a href="pg-Diploma-Interior.html">PG Diploma in Interior Architecture and
+                                        Design</a></li>
+                                <li><a href="Diploma-Interior.html">Diploma in Interior Architecture & Design</a></li>
+                                <li><a href="Kitchen-Design.html">Certificate course on Kitchen Design</a></li>
+                                <li><a href="CAD-Design.html">CAD for Creative Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#fashion">Fashion Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Fashion-Master.html">Master Diploma in Fashion Design</a></li>
+                                <li><a href="Fashion-Professional-CAD.html">Professional in Fashion CAD</a></li>
+                                <li><a href="Fashion-Professional.html">Professional in Fashion design</a></li>
+                                <li><a href="Fashion-Diploma-Digital.html">Diploma in Digital Fashion</a></li>
+                                <li><a href="Fashion-Digital-Certificate.html">Certificate Course on Digital Fashion</a>
+                                </li>
+                                <li><a href="Fashion-Dress-Making.html">Certificate Course on Dress Making</a></li>
+                                <li><a href="Fashion-Certificate-Image-Editing.html">Certificate Course in Image
+                                        Editing</a></li>
+                                <li><a href="Fashion-Certificate-Digital-Illustration.html">Certificate Course in
+                                        Digital Illustration</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#graphic">Graphic Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Graphic-Web-Design.html">Master Diploma in 2D Graphics & Web Design</a>
+                                </li>
+                                <li><a href="Graphic-Animation.html">PG Diploma in Graphics & Animation</a></li>
+                                <li><a href="Graphic-Professional.html">Professional in Graphic Design</a></li>
+                                <li><a href="Graphic-Professional-Animation.html">Professional in Animation</a></li>
+                                <li><a href="Graphic-UX-UI-Design.html">Professional in UX/UI Design</a></li>
+                                <li><a href="Graphic-Diploma-UX-UI.html">Diploma in UX/UI Design</a></li>
+                                <li><a href="Graphic-Motion.html">Diploma in Motion Graphics</a></li>
+                                <li><a href="Graphic-Diploma-Design.html">Diploma in Graphic Design</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" onclick="openGalleryPopup(); return false;">Gallery</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Button -->
+                <div class="header-actions">
+                    <button onclick="openEnrollmentPopup()" class="btn-contact">Enquiry Now</button>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <img src="assets/images/logo/logo.png" alt="Dreamzone Logo" class="mobile-logo">
+                <button class="mobile-close" id="mobileClose">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+
+                    <li class="mobile-has-dropdown">
+                        <button class="mobile-dropdown-toggle">
+                            Interior Design <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="Master-Interior.html">Master Diploma in Interior Architecture & Design</a></li>
+                            <li><a href="Executive-Interior.html">Executive Diploma In Interior Architecture &
+                                    Design</a></li>
+                            <li><a href="pg-Diploma-Interior.html">PG Diploma in Interior Architecture and Design</a>
+                            </li>
+                            <li><a href="Diploma-Interior.html">Diploma in Interior Architecture & Design</a></li>
+                            <li><a href="Kitchen-Design.html">Certificate course on Kitchen Design</a></li>
+                            <li><a href="CAD-Design.html">CAD for Creative Design</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-has-dropdown">
+                        <button class="mobile-dropdown-toggle">
+                            Fashion Design <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="Fashion-Master.html">Master Diploma in Fashion Design</a></li>
+                            <li><a href="Fashion-Professional-CAD.html">Professional in Fashion CAD</a></li>
+                            <li><a href="Fashion-Professional.html">Professional in Fashion design</a></li>
+                            <li><a href="Fashion-Diploma-Digital.html">Diploma in Digital Fashion</a></li>
+                            <li><a href="Fashion-Digital-Certificate.html">Certificate Course on Digital Fashion</a>
+                            </li>
+                            <li><a href="Fashion-Dress-Making.html">Certificate Course on Dress Making</a></li>
+                            <li><a href="Fashion-Certificate-Image-Editing.html">Certificate Course in Image Editing</a>
+                            </li>
+                            <li><a href="Fashion-Certificate-Digital-Illustration.html">Certificate Course in Digital
+                                    Illustration</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-has-dropdown">
+                        <button class="mobile-dropdown-toggle">
+                            Graphic Design <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="Graphic-Web-Design.html">Master Diploma in 2D Graphics & Web Design</a></li>
+                            <li><a href="Graphic-Animation.html">PG Diploma in Graphics & Animation</a></li>
+                            <li><a href="Graphic-Professional.html">Professional in Graphic Design</a></li>
+                            <li><a href="Graphic-Professional-Animation.html">Professional in Animation</a></li>
+                            <li><a href="Graphic-UX-UI-Design.html">Professional in UX/UI Design</a></li>
+                            <li><a href="Graphic-Diploma-UX-UI.html">Diploma in UX/UI Design</a></li>
+                            <li><a href="Graphic-Motion.html">Diploma in Motion Graphics</a></li>
+                            <li><a href="Graphic-Diploma-Design.html">Diploma in Graphic Design</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button onclick="openEnrollmentPopup()" class="mobile-contact-btn">Enquiry Now</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left Side: Text Content -->
+                <div class="hero-text">
+                    <h1 class="hero-title">Empowering Creative Minds to Create the Future.</h1>
+                    <p class="hero-description">Whether it's fashion design, interior design, animation, or graphic
+                        design, Dreamzone Velachery nurtures talent and helps every student turn imagination into
+                        impact.</p>
+                    <div class="hero-buttons">
+                        <button onclick="openRegistrationPopup()" class="btn btn-primary">
+                            Download Brochure <i class="ri-download-line"></i>
+                        </button>
+                        <button onclick="openEnrollmentPopup()" class="btn btn-secondary">
+                            Enquiry Now <i class="ri-question-answer-line"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Side: Professional Circular Slider Container -->
+                <div class="hero-circular-container">
+                    <!-- 30% OFF Badge at Top (Background rotates, text stays fixed) -->
+                    <div class="offer-badge-circle">
+                        <!-- Rotating background -->
+                        <div class="badge-rotating-bg"></div>
+                        <!-- Static text overlay (does not rotate) -->
+                        <div class="badge-inner">
+                            <span class="badge-percent">30%</span>
+                            <span class="badge-text">OFF</span>
+                        </div>
+                    </div>
+
+                    <!-- Outer Rotating Border Ring -->
+                    <div class="circular-border-ring"></div>
+
+                    <!-- Inner Circle with Image Slider -->
+                    <div class="circular-slider-wrapper">
+                        <div class="slider-track">
+                            <div class="slider-item active">
+                                <img src="assets/images/landing-demo/home-01.jpg" alt="Creative Design">
+                                <div class="slider-info">
+                                    <h3>Fashion Design</h3>
+                                    <p>Create stunning collections</p>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <img src="assets/images/landing-demo/home-03.jpg" alt="Interior Design">
+                                <div class="slider-info">
+                                    <h3>Interior Design</h3>
+                                    <p>Transform spaces</p>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <img src="assets/images/landing-demo/home-02.jpg" alt="Graphic Design">
+                                <div class="slider-info">
+                                    <h3>Graphic Design</h3>
+                                    <p>Bring ideas to life</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Navigation Dots -->
+                    <div class="circular-slider-nav">
+                        <button class="slider-dot active" data-slide="0"></button>
+                        <button class="slider-dot" data-slide="1"></button>
+                        <button class="slider-dot" data-slide="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- D2D Festival Section -->
+    <section class="festival-section" id="explore-courses">
+        <div class="container">
+            <div class="section-header">
+
+                <h2 class="section-title">Discover our courses. Get inspired.</h2>
+                <p class="section-subtitle">Infusing creativity with technology</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/landing-demo/home-01.jpg" alt="Fashion Design">
+                        <div class="course-overlay">
+                            <a href="#fashion" class="btn-explore"
+                                onclick="toggleNavDropdown('fashion'); return false;">Explore</a>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Fashion Design</h3>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/landing-demo/home-02.jpg" alt="Graphic Design">
+                        <div class="course-overlay">
+                            <a href="#graphic" class="btn-explore"
+                                onclick="toggleNavDropdown('graphic'); return false;">Explore</a>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Graphic Design</h3>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/landing-demo/home-03.jpg" alt="Interior Design">
+                        <div class="course-overlay">
+                            <a href="#interior" class="btn-explore"
+                                onclick="toggleNavDropdown('interior'); return false;">Explore</a>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Interior Design</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-description">Our teachers are industry professionals with a passion for
+                    helping you
+                    succeed. They provide personalized attention and support throughout your learning
+                    journey.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-award-line"></i>
+                    </div>
+                    <h3 class="feature-title">Award-Winning Training</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+                    <h3 class="feature-title">Expert Mentors</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-map-pin-line"></i>
+                    </div>
+                    <h3 class="feature-title">Prime Velachery Location</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-gallery-line"></i>
+                    </div>
+                    <h3 class="feature-title">Showcase Opportunities</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-file-list-line"></i>
+                    </div>
+                    <h3 class="feature-title">No Assessment</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-calendar-check-line"></i>
+                    </div>
+                    <h3 class="feature-title">Weekend Batch for Professionals</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-bank-card-line"></i>
+                    </div>
+                    <h3 class="feature-title">No Cost EMI Option</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="workshops-section">
+        <div class="container">
+            <div class="workshops-content">
+                <div class="workshops-text">
+                    <h2 class="section-title">Sharpen Your Skills</h2>
+                    <p class="section-subtitle">Unleash Your Potential through our interactive Workshops!
+                    </p>
+
+                </div>
+                <div class="workshops-video">
+                    <div class="video-wrapper">
+                        <img src="assets/images/videopopup/video-popup-bg-02.jpg" alt="Workshop Video" class="video-bg">
+                        <div class="video-overlay"></div>
+                        <button class="video-play-btn" onclick="openVideoModal()" aria-label="Play Video">
+                            <span class="play-icon">
+                                <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+                                    <path
+                                        d="M22.5 11.268C24.5 12.423 24.5 15.577 22.5 16.732L4.5 26.856C2.5 28.011 0 26.434 0 24.124L0 3.876C0 1.566 2.5 -0.011 4.5 1.144L22.5 11.268Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                            <span class="play-pulse"></span>
+                            <span class="play-pulse-2"></span>
+                        </button>
+                        <div class="video-info">
+                            <span class="video-duration">
+                                <i class="ri-play-circle-line"></i> Watch Now
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-overlay" onclick="closeVideoModal()"></div>
+        <div class="video-modal-content">
+            <button class="video-close-btn" onclick="closeVideoModal()">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="video-container">
+                <video id="videoPlayer" controls controlsList="nodownload">
+                    <source src="assets/video/Corp video for DZ_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Popup for Brochure Download -->
+    <div id="registrationPopup" class="registration-modal">
+        <div class="registration-overlay" onclick="closeRegistrationPopup()"></div>
+        <div class="registration-content">
+            <button class="registration-close" onclick="closeRegistrationPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <div class="registration-header">
+                <i class="ri-file-download-line"></i>
+                <h2>Download Brochure</h2>
+                <p>Please fill in your details to download our brochure</p>
+            </div>
+
+            <form id="brochureForm" class="registration-form" onsubmit="handleBrochureSubmit(event)">
+                <h3 class="form-title">Fill Your Details</h3>
+                <div class="form-group">
+                    <label for="regName">Full Name *</label>
+                    <input type="text" id="regName" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail">Email Address *</label>
+                    <input type="email" id="regEmail" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="regPhone">Phone Number *</label>
+                    <input type="tel" id="regPhone" name="phone" required placeholder="Enter your phone number"
+                        pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="regCourse">Interested Course</label>
+                    <select id="regCourse" name="course">
+                        <option value="">Select a course</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Fashion Design">Fashion Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Animation">Animation</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Submit & Download <i class="ri-download-line"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Download Success Popup -->
+    <div id="downloadPopup" class="download-modal">
+        <div class="download-overlay" onclick="closeDownloadPopup()"></div>
+        <div class="download-content">
+            <button class="download-close" onclick="closeDownloadPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="download-success">
+                <div class="success-icon">
+                    <i class="ri-checkbox-circle-fill"></i>
+                </div>
+                <h2>Thank You!</h2>
+                <p>Your registration was successful</p>
+                <a href="assets/brochure/Dreamzonebrochure_250526_122724.pdf" download class="btn-download"
+                    onclick="closeDownloadPopup()">
+                    <i class="ri-download-cloud-line"></i> Download Brochure
+                </a>
+                <p class="download-note">The download will start automatically</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Popup (No Download) -->
+    <div id="enrollmentPopup" class="registration-modal">
+        <div class="registration-overlay" onclick="closeEnrollmentPopup()"></div>
+        <div class="registration-content">
+            <button class="registration-close" onclick="closeEnrollmentPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <div class="registration-header">
+                <i class="ri-question-answer-line"></i>
+                <h2>Enquiry Form</h2>
+                <p>Please fill in your details to enquire with us</p>
+            </div>
+
+            <form id="enrollForm" class="registration-form" onsubmit="handleEnrollSubmit(event)">
+                <div class="form-group">
+                    <label for="enrollName">Full Name *</label>
+                    <input type="text" id="enrollName" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollEmail">Email Address *</label>
+                    <input type="email" id="enrollEmail" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollPhone">Phone Number *</label>
+                    <input type="tel" id="enrollPhone" name="phone" required placeholder="Enter your phone number"
+                        pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollCourse">Interested Course *</label>
+                    <select id="enrollCourse" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Fashion Design">Fashion Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Animation">Animation</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Submit Enquiry <i class="ri-send-plane-fill"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification">
+        <div class="toast-icon">
+            <i class="ri-checkbox-circle-fill"></i>
+        </div>
+        <div class="toast-content">
+            <h4>Success!</h4>
+            <p id="toastMessage">Your request has been submitted successfully</p>
+        </div>
+        <button class="toast-close" onclick="closeToast()">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Unveiling Our Laurels</h2>
+                <p class="section-description">Dreamzone continues to bask in the glory of its achievements
+                    and the
+                    recognition it has received</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="shine"></div>
+                    <span class="achievement-badge">Award Winner</span>
+                    <img src="assets/images/landing-demo/course-1.jpg" alt="Achievement 1">
+                </div>
+                <div class="achievement-card">
+                    <div class="shine"></div>
+                    <span class="achievement-badge">Recognized</span>
+                    <img src="assets/images/landing-demo/course-2.jpg" alt="Achievement 2">
+                </div>
+                <div class="achievement-card">
+                    <div class="shine"></div>
+                    <span class="achievement-badge">Excellence</span>
+                    <img src="assets/images/landing-demo/course-3.jpg" alt="Achievement 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Work Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+
+                <h2 class="section-title">Our Students and Alumni's Work Here!</h2>
+                <p class="section-subtitle">Witness the creativity and talent of our amazing students</p>
+            </div>
+            <div class="gallery-grid masonry-grid">
+                <!-- Row 1 - Slides Left -->
+                <div class="gallery-row">
+                    <div class="gallery-item"><img src="assets/images/landing-demo/01.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/03.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/04.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/05.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/06.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/07.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/08.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="gallery-item"><img src="assets/images/landing-demo/01.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/03.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/04.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/05.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/06.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/07.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/08.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                </div>
+
+                <!-- Row 2 - Slides Right -->
+                <div class="gallery-row">
+                    <div class="gallery-item"><img src="assets/images/landing-demo/09.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/10.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/12.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/13.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/14.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/15.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/16.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="gallery-item"><img src="assets/images/landing-demo/09.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/10.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/12.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/13.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/14.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/15.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/16.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                </div>
+
+                <!-- Row 3 - Slides Left -->
+                <div class="gallery-row">
+                    <div class="gallery-item"><img src="assets/images/landing-demo/17.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/18.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/19.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/20.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/21.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/22.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/23.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="gallery-item"><img src="assets/images/landing-demo/17.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/18.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/19.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/20.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/21.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/22.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <div class="gallery-item"><img src="assets/images/landing-demo/23.png" alt="Student Work">
+                        <div class="gallery-overlay"><i class="ri-eye-line"></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section" id="register">
+        <div class="container">
+            <div class="registration-content">
+                <div class="registration-header">
+                    <h2 class="section-title">Grab Your Special Discounts</h2>
+                    <p class="section-subtitle">Celebrate the season with Exclusive festive offers</p>
+                    <p class="section-highlight">Top-Ranked Design Courses at Dreamzone Velachery</p>
+                </div>
+                <div class="courses-list">
+                    <div class="course-category">
+                        <h3 class="category-title">Fashion Design</h3>
+                        <ul class="course-items">
+                            <li>Master Diploma in Fashion Design</li>
+                            <li>Professional in Fashion design</li>
+                            <li>Certificate Course on Dress Making</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3 class="category-title">Interior Design</h3>
+                        <ul class="course-items">
+                            <li>Master Diploma in Interior Architecture & Design</li>
+                            <li>PG Diploma in Interior Architecture and Design</li>
+                            <li>Certificate course on Design Visualization</li>
+                            <li>Certificate course on Kitchen Design</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3 class="category-title">Graphics & Animation</h3>
+                        <ul class="course-items">
+                            <li>Master Diploma in 2D Graphics & Web Design</li>
+                            <li>Professional in Animation</li>
+                            <li>PG Diploma in Graphics Animation</li>
+                            <li>Diploma in UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="registration-cta" style="margin-top: 40px;">
+                    <button onclick="openEnrollmentPopup()" class="btn btn-primary btn-large">Register Today</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/logo.png" alt="Dreamzone" class="footer-logo">
+                    <p>Transforming passion into profession through world-class design education.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="home.html#explore-courses">Courses</a></li>
+                        <li><a href="#" onclick="openGalleryPopup(); return false;">Gallery</a></li>
+                        <li><a href="#" onclick="openContactPopup(); return false;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="ri-map-pin-line"></i> Velachery, Chennai</li>
+                        <li><i class="ri-phone-line"></i> +91 9994355699</li>
+                        <li><i class="ri-mail-line"></i> velacherydz@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/184DRQvqsW/" target="_blank"
+                            rel="noopener noreferrer"><i class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/dreamzone.velachery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a>
+                        <a href="https://www.linkedin.com/company/dreamzone-velachery/" target="_blank"
+                            rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dreamzone Velachery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/home.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919994355699" target="_blank" class="whatsapp-float">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-green 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .whatsapp-float i {
+            margin-top: 2px;
+            /* Slight optical adjustment */
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+    <!-- Contact Us Popup -->
+    <div id="contactPopup" class="contact-modal">
+        <div class="contact-overlay" onclick="closeContactPopup()"></div>
+        <div class="contact-content">
+            <button class="contact-close" onclick="closeContactPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <!-- Left Side - Gradient Panel -->
+            <div class="contact-left">
+                <div class="contact-icon">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <h2>Get In Touch</h2>
+                <p>We''d love to hear from you! Reach out to us for any queries about our courses.</p>
+
+                <div class="contact-info-item">
+                    <i class="ri-map-pin-line"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>Velachery, Chennai</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="ri-phone-line"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+919994355699">+91 9994355699</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="ri-mail-line"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:velacherydz@gmail.com">velacherydz@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <h4>Follow Us</h4>
+                    <div class="contact-social-links">
+                        <a href="https://www.facebook.com/share/184DRQvqsW/" target="_blank" aria-label="Facebook">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dreamzone.velachery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" aria-label="Instagram">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreamzone-velachery/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Map & Hours -->
+            <div class="contact-right">
+                <h3>Find Us Here</h3>
+                <p>Visit our campus in Velachery, Chennai</p>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d80.2!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA4MMKwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="contact-hours">
+                    <h4>Working Hours</h4>
+                    <p><strong>Monday - Sunday:</strong> 09:00 AM - 06:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Gallery Popup Modal - Google Photos Style -->
+<div id="galleryPopup" class="gallery-modal">
+    <!-- Header -->
+    <div class="gallery-modal-header">
+        <div class="gallery-modal-title">
+            <h2>Dreamzone Velachery</h2>
+        </div>
+        <button class="gallery-modal-close" onclick="closeGalleryPopup()">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+    <!-- Main Body -->
+    <div class="gallery-modal-body">
+        <!-- Left Sidebar - Thumbnails -->
+        <div class="gallery-sidebar">
+            <div class="gallery-thumbnail active" onclick="showGalleryImage(0)" data-index="0">
+                <img src="assets/images/gallery/gallery-1.jpg" alt="Creative Learning Space">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(1)" data-index="1">
+                <img src="assets/images/gallery/gallery-2.jpg" alt="Design Studio">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(2)" data-index="2">
+                <img src="assets/images/gallery/gallery-3.jpg" alt="Campus Environment">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(3)" data-index="3">
+                <img src="assets/images/gallery/gallery-4.jpg" alt="Learning Hub">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(4)" data-index="4">
+                <img src="assets/images/gallery/gallery-5.jpg" alt="Training Facility">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(5)" data-index="5">
+                <img src="assets/images/gallery/gallery-6.jpg" alt="Creative Workshop">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(6)" data-index="6">
+                <img src="assets/images/gallery/gallery-7.jpg" alt="Student Zone">
+            </div>
+        </div>
+
+        <!-- Right Side - Main Viewer -->
+        <div class="gallery-viewer">
+            <button class="gallery-nav-btn gallery-nav-prev" onclick="navigateGallery(-1)">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+
+            <img id="galleryMainImage" class="gallery-viewer-image" src="assets/images/gallery/gallery-1.jpg"
+                alt="Gallery Image">
+
+            <button class="gallery-nav-btn gallery-nav-next" onclick="navigateGallery(1)">
+                <i class="ri-arrow-right-s-line"></i>
+            </button>
+
+            <div class="gallery-image-info">
+                <h3 id="galleryImageTitle">Creative Learning Space</h3>
+                <p id="galleryImageDesc">State-of-the-art facilities for design education</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Gallery Popup Functions - Google Photos Style
+    const galleryData = [
+        {
+            src: 'assets/images/gallery/gallery-1.jpg',
+            title: 'Creative Learning Space',
+            desc: 'State-of-the-art facilities for design education'
+        },
+        {
+            src: 'assets/images/gallery/gallery-2.jpg',
+            title: 'Design Studio',
+            desc: 'Professional workspace for aspiring designers'
+        },
+        {
+            src: 'assets/images/gallery/gallery-3.jpg',
+            title: 'Campus Environment',
+            desc: 'Modern infrastructure for creative minds'
+        },
+        {
+            src: 'assets/images/gallery/gallery-4.jpg',
+            title: 'Learning Hub',
+            desc: 'Collaborative spaces for innovation'
+        },
+        {
+            src: 'assets/images/gallery/gallery-5.jpg',
+            title: 'Training Facility',
+            desc: 'Equipped with latest design tools'
+        },
+        {
+            src: 'assets/images/gallery/gallery-6.jpg',
+            title: 'Creative Workshop',
+            desc: 'Hands-on learning experience'
+        },
+        {
+            src: 'assets/images/gallery/gallery-7.jpg',
+            title: 'Student Zone',
+            desc: 'Inspiring environment for creativity'
+        }
+    ];
+
+    let currentGalleryIndex = 0;
+
+    function openGalleryPopup(startIndex = 0) {
+        const modal = document.getElementById('galleryPopup');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        showGalleryImage(startIndex);
+    }
+
+    function closeGalleryPopup() {
+        const modal = document.getElementById('galleryPopup');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showGalleryImage(index) {
+        currentGalleryIndex = index;
+        const data = galleryData[index];
+
+        // Update main image
+        const mainImage = document.getElementById('galleryMainImage');
+        mainImage.src = data.src;
+
+        // Update info
+        document.getElementById('galleryImageTitle').textContent = data.title;
+        document.getElementById('galleryImageDesc').textContent = data.desc;
+
+        // Update active thumbnail
+        document.querySelectorAll('.gallery-thumbnail').forEach((thumb, i) => {
+            if (i === index) {
+                thumb.classList.add('active');
+                // Scroll thumbnail into view
+                thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+                thumb.classList.remove('active');
+            }
+        });
+    }
+
+    function navigateGallery(direction) {
+        let newIndex = currentGalleryIndex + direction;
+
+        if (newIndex < 0) {
+            newIndex = galleryData.length - 1;
+        } else if (newIndex >= galleryData.length) {
+            newIndex = 0;
+        }
+
+        showGalleryImage(newIndex);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+        const modal = document.getElementById('galleryPopup');
+        if (modal && modal.classList.contains('active')) {
+            if (e.key === 'Escape') {
+                closeGalleryPopup();
+            } else if (e.key === 'ArrowLeft') {
+                navigateGallery(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateGallery(1);
+            }
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Dreamzone Velachery</title>
+    <meta name="description"
+        content="Explore our gallery showcasing the vibrant learning environment and creative spaces at DreamZone Velachery.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/modal-elegant.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">
+    <link rel="stylesheet" href="assets/css/contact-popup.css">
+
+                <style>
+        /* Gallery Specific Styles - Full Screen Collage */
+        body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-hero {
+            padding: 140px 0 40px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .gallery-hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 56px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #e91e63 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .gallery-hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-section {
+            padding: 0;
+            background: #000;
+            min-height: 100vh;
+        }
+
+        .gallery-section .container {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 280px;
+            gap: 3px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Collage Layout - Big Images */
+        .gallery-item:nth-child(1) {
+            grid-column: span 6;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column: span 6;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 8;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 5;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(6) {
+            grid-column: span 7;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(7) {
+            grid-column: span 12;
+            grid-row: span 3;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.01);
+            z-index: 100;
+            box-shadow: 0 0 40px rgba(233, 30, 99, 0.6);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+            filter: brightness(0.85) contrast(1.15);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            filter: brightness(1) contrast(1.2);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(233, 30, 99, 0.3) 50%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 35px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-info {
+            color: white;
+            transform: translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+        }
+
+        .gallery-item:hover .gallery-info {
+            transform: translateY(0);
+        }
+
+        .gallery-info h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Outfit', sans-serif;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+        }
+
+        .gallery-info p {
+            font-size: 16px;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.98);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 95vw;
+            max-height: 95vh;
+            position: relative;
+            animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 95vh;
+            border-radius: 0;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 26px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.5);
+        }
+
+        .lightbox-close:hover {
+            transform: rotate(90deg) scale(1.15);
+            box-shadow: 0 6px 25px rgba(233, 30, 99, 0.7);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.95), rgba(156, 39, 176, 0.95));
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.5);
+        }
+
+        .lightbox-nav:hover {
+            transform: translateY(-50%) scale(1.15);
+            box-shadow: 0 6px 25px rgba(233, 30, 99, 0.7);
+        }
+
+        .lightbox-prev {
+            left: -80px;
+        }
+
+        .lightbox-next {
+            right: -80px;
+        }
+
+        /* Add zoom icon on hover */
+        .gallery-item::after {
+            content: '\eb9a';
+            font-family: 'remixicon';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 70px;
+            color: white;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            text-shadow: 0 5px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        .gallery-item:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(6, 1fr);
+                grid-auto-rows: 250px;
+                gap: 2px;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 3;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(2) {
+                grid-column: span 3;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(3) {
+                grid-column: span 6;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(4) {
+                grid-column: span 4;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(5) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(6) {
+                grid-column: span 3;
+                grid-row: span 2;
+            }
+
+            .gallery-item:nth-child(7) {
+                grid-column: span 3;
+                grid-row: span 2;
+            }
+
+            .gallery-info h3 {
+                font-size: 22px;
+            }
+
+            .gallery-info p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 220px;
+                gap: 2px;
+            }
+
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(2),
+            .gallery-item:nth-child(3),
+            .gallery-item:nth-child(4),
+            .gallery-item:nth-child(5),
+            .gallery-item:nth-child(6) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .gallery-item:nth-child(7) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .gallery-hero h1 {
+                font-size: 38px;
+            }
+
+            .gallery-hero p {
+                font-size: 16px;
+            }
+
+            .lightbox-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+            .lightbox-close {
+                top: -50px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .gallery-info h3 {
+                font-size: 20px;
+            }
+
+            .gallery-info p {
+                font-size: 13px;
+            }
+
+            .gallery-overlay {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="assets/images/logo/logo.png" alt="Dreamzone Logo">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="has-dropdown">
+                            <a href="#interior">Interior Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Master-Interior.html">Master Diploma in Interior Architecture & Design</a>
+                                </li>
+                                <li><a href="Executive-Interior.html">Executive Diploma In Interior Architecture &
+                                        Design</a></li>
+                                <li><a href="pg-Diploma-Interior.html">PG Diploma in Interior Architecture and
+                                        Design</a></li>
+                                <li><a href="Diploma-Interior.html">Diploma in Interior Architecture & Design</a></li>
+                                <li><a href="Kitchen-Design.html">Certificate course on Kitchen Design</a></li>
+                                <li><a href="CAD-Design.html">CAD for Creative Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#fashion">Fashion Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Fashion-Master.html">Master Diploma in Fashion Design</a></li>
+                                <li><a href="Fashion-Professional-CAD.html">Professional in Fashion CAD</a></li>
+                                <li><a href="Fashion-Professional.html">Professional in Fashion design</a></li>
+                                <li><a href="Fashion-Diploma-Digital.html">Diploma in Digital Fashion</a></li>
+                                <li><a href="Fashion-Digital-Certificate.html">Certificate Course on Digital Fashion</a>
+                                </li>
+                                <li><a href="Fashion-Dress-Making.html">Certificate Course on Dress Making</a></li>
+                                <li><a href="Fashion-Certificate-Image-Editing.html">Certificate Course in Image
+                                        Editing</a></li>
+                                <li><a href="Fashion-Certificate-Digital-Illustration.html">Certificate Course in
+                                        Digital Illustration</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#graphic">Graphic Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Graphic-Web-Design.html">Master Diploma in 2D Graphics & Web Design</a>
+                                </li>
+                                <li><a href="Graphic-Animation.html">PG Diploma in Graphics & Animation</a></li>
+                                <li><a href="Graphic-Professional.html">Professional in Graphic Design</a></li>
+                                <li><a href="Graphic-Professional-Animation.html">Professional in Animation</a></li>
+                                <li><a href="Graphic-UX-UI-Design.html">Professional in UX/UI Design</a></li>
+                                <li><a href="Graphic-Diploma-UX-UI.html">Diploma in UX/UI Design</a></li>
+                                <li><a href="Graphic-Motion.html">Diploma in Motion Graphics</a></li>
+                                <li><a href="Graphic-Diploma-Design.html">Diploma in Graphic Design</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Button -->
+                <div class="header-actions">
+                    <button onclick="openEnrollmentPopup()" class="btn-contact">Enquiry Now</button>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <img src="assets/images/logo/logo.png" alt="Dreamzone Logo" class="mobile-logo">
+                <button class="mobile-close" id="mobileClose">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="mobile-nav-link active">Gallery</a></li>
+                </ul>
+                <button onclick="openEnrollmentPopup()" class="mobile-contact-btn">Enquiry Now</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Explore our vibrant learning environment and creative spaces where dreams come to life</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="assets/images/gallery/gallery-1.jpg"
+                        alt="Dreamzone Campus 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Creative Learning Space</h3>
+                            <p>State-of-the-art facilities for design education</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="assets/images/gallery/gallery-2.jpg"
+                        alt="Dreamzone Campus 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Design Studio</h3>
+                            <p>Professional workspace for aspiring designers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="assets/images/gallery/gallery-3.jpg"
+                        alt="Dreamzone Campus 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Campus Environment</h3>
+                            <p>Modern infrastructure for creative minds</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="assets/images/gallery/gallery-4.jpg"
+                        alt="Dreamzone Campus 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Learning Hub</h3>
+                            <p>Collaborative spaces for innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="assets/images/gallery/gallery-5.jpg"
+                        alt="Dreamzone Campus 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Training Facility</h3>
+                            <p>Equipped with latest design tools</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="assets/images/gallery/gallery-6.jpg"
+                        alt="Dreamzone Campus 6" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Creative Workshop</h3>
+                            <p>Hands-on learning experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="assets/images/gallery/gallery-7.jpg"
+                        alt="Dreamzone Campus 7" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Student Zone</h3>
+                            <p>Inspiring environment for creativity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="ri-close-line"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="Gallery Image">
+            <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">
+                <i class="ri-arrow-right-s-line"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/logo.png" alt="Dreamzone" class="footer-logo">
+                    <p>Transforming passion into profession through world-class design education.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="home.html#explore-courses">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#" onclick="openContactPopup(); return false;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="ri-map-pin-line"></i> Velachery, Chennai</li>
+                        <li><i class="ri-phone-line"></i> +91 9994355699</li>
+                        <li><i class="ri-mail-line"></i> velacherydz@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/184DRQvqsW/" target="_blank"
+                            rel="noopener noreferrer"><i class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/dreamzone.velachery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a>
+                        <a href="https://www.linkedin.com/company/dreamzone-velachery/" target="_blank"
+                            rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dreamzone Velachery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enrollment Popup -->
+    <div id="enrollmentPopup" class="registration-modal">
+        <div class="registration-overlay" onclick="closeEnrollmentPopup()"></div>
+        <div class="registration-content">
+            <button class="registration-close" onclick="closeEnrollmentPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <div class="registration-header">
+                <i class="ri-question-answer-line"></i>
+                <h2>Enquiry Form</h2>
+                <p>Please fill in your details to enquire with us</p>
+            </div>
+
+            <form id="enrollForm" class="registration-form" onsubmit="handleEnrollSubmit(event)">
+                <div class="form-group">
+                    <label for="enrollName">Full Name *</label>
+                    <input type="text" id="enrollName" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollEmail">Email Address *</label>
+                    <input type="email" id="enrollEmail" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollPhone">Phone Number *</label>
+                    <input type="tel" id="enrollPhone" name="phone" required placeholder="Enter your phone number"
+                        pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollCourse">Interested Course *</label>
+                    <select id="enrollCourse" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Fashion Design">Fashion Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Animation">Animation</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Submit Enquiry <i class="ri-send-plane-fill"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification">
+        <div class="toast-icon">
+            <i class="ri-checkbox-circle-fill"></i>
+        </div>
+        <div class="toast-content">
+            <h4>Success!</h4>
+            <p id="toastMessage">Your request has been submitted successfully</p>
+        </div>
+        <button class="toast-close" onclick="closeToast()">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/home.js"></script>
+
+    <!-- Gallery Lightbox Script -->
+    <script>
+        const galleryImages = [
+            'assets/images/gallery/gallery-1.jpg',
+            'assets/images/gallery/gallery-2.jpg',
+            'assets/images/gallery/gallery-3.jpg',
+            'assets/images/gallery/gallery-4.jpg',
+            'assets/images/gallery/gallery-5.jpg',
+            'assets/images/gallery/gallery-6.jpg',
+            'assets/images/gallery/gallery-7.jpg'
+        ];
+
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImage');
+            img.src = galleryImages[index];
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            } else if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            }
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const modal = document.getElementById('lightboxModal');
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    navigateLightbox(-1);
+                } else if (e.key === 'ArrowRight') {
+                    navigateLightbox(1);
+                }
+            }
+        });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919994355699" target="_blank" class="whatsapp-float">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-green 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .whatsapp-float i {
+            margin-top: 2px;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+    <!-- Contact Popup -->
+    <div id="contactPopup" class="contact-modal">
+        <div class="contact-overlay" onclick="closeContactPopup()"></div>
+        <div class="contact-content">
+            <button class="contact-close" onclick="closeContactPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <div class="contact-left">
+                <div class="contact-icon">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you! Reach out to us for any queries about our courses.</p>
+
+                <div class="contact-info-item">
+                    <i class="ri-map-pin-line"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>Velachery, Chennai</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="ri-phone-line"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+919994355699">+91 9994355699</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="ri-mail-line"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:velacherydz@gmail.com">velacherydz@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <h4>Follow Us</h4>
+                    <div class="contact-social-links">
+                        <a href="https://www.facebook.com/share/184DRQvqsW/" target="_blank" aria-label="Facebook">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dreamzone.velachery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" aria-label="Instagram">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreamzone-velachery/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <h3>Find Us Here</h3>
+                <p>Visit our campus in Velachery, Chennai</p>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d80.2!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA4MMKwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="contact-hours">
+                    <h4>Working Hours</h4>
+                    <p><strong>Monday - Sunday:</strong> 09:00 AM - 06:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

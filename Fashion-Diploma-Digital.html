@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma in Digital Fashion - Dreamzone Velachery</title>
+    <meta name="description"
+        content="Diploma in Digital Fashion at DreamZone Velachery. Learn CLO 3D, Photoshop, Illustrator and digital garment visualization.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/modal-elegant.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">
+
+    <style>
+        /* Course Specific Styles */
+        .course-hero {
+            padding: 140px 0 120px;
+            background: #0f172a;
+            
+            
+            color: white;
+            text-align: left;
+        }
+
+        .course-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        
+        /* Option 3: Neon Accent Styles */
+        .highlights-bar {
+            background: #0f172a; /* Deep luxury dark */
+            padding: 45px 0;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            margin-top: -60px;
+            position: relative;
+            border-radius: 16px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid #e91e63; /* Neon Pink Brand Line */
+        }
+
+        .highlight-item {
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .highlight-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-icon {
+            font-size: 32px;
+            color: #e91e63;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px rgba(233, 30, 99, 0.5)); /* Neon Glow */
+        }
+
+        .highlight-value {
+            font-size: 30px; /* Larger */
+            font-weight: 800;
+            color: #ffffff; /* White text */
+            display: block;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .highlight-label {
+            color: #94a3b8; /* Slate grey */
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .module-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .module-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 4px solid #e91e63;
+        }
+
+        .module-item i {
+            color: #e91e63;
+        }
+
+        .career-card {
+            background: #fcfcfc;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .tool-item {
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .tool-icon {
+            font-size: 40px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/contact-popup.css">
+    <link rel="stylesheet" href="assets/css/gallery-popup.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="assets/images/logo/logo.png" alt="Dreamzone Logo">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="has-dropdown">
+                            <a href="#interior">Interior Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Master-Interior.html">Master Diploma in Interior Architecture & Design</a>
+                                </li>
+                                <li><a href="Executive-Interior.html">Executive Diploma In Interior Architecture &
+                                        Design</a></li>
+                                <li><a href="pg-Diploma-Interior.html">PG Diploma in Interior Architecture and
+                                        Design</a></li>
+                                <li><a href="Diploma-Interior.html">Diploma in Interior Architecture & Design</a></li>
+                                <li><a href="Kitchen-Design.html">Certificate course on Kitchen Design</a></li>
+                                <li><a href="CAD-Design.html">CAD for Creative Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#fashion" class="active">Fashion Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Fashion-Master.html">Master Diploma in Fashion Design</a></li>
+                                <li><a href="Fashion-Professional-CAD.html">Professional in Fashion CAD</a></li>
+                                <li><a href="Fashion-Professional.html">Professional in Fashion design</a></li>
+                                <li><a href="Fashion-Diploma-Digital.html" class="active">Diploma in Digital Fashion</a></li>
+                                <li><a href="Fashion-Digital-Certificate.html">Certificate Course on Digital Fashion</a></li>
+                                <li><a href="Fashion-Dress-Making.html">Certificate Course on Dress Making</a></li>
+                                <li><a href="Fashion-Certificate-Image-Editing.html">Certificate Course in Image Editing</a></li>
+                                <li><a href="Fashion-Certificate-Digital-Illustration.html">Certificate Course in Digital Illustration</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#graphic">Graphic Design <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Graphic-Web-Design.html">Master Diploma in 2D Graphics & Web Design</a>
+                                </li>
+                                <li><a href="Graphic-Animation.html">PG Diploma in Graphics & Animation</a></li>
+                                <li><a href="Graphic-Professional.html">Professional in Graphic Design</a></li>
+                                <li><a href="Graphic-Professional-Animation.html">Professional in Animation</a></li>
+                                <li><a href="Graphic-UX-UI-Design.html">Professional in UX/UI Design</a></li>
+                                <li><a href="Graphic-Motion.html">Diploma in Motion Graphics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Button -->
+                <div class="header-actions">
+                    <button onclick="openEnrollmentPopup()" class="btn-contact">Enquiry Now</button>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <img src="assets/images/logo/logo.png" alt="Dreamzone Logo" class="mobile-logo">
+                <button class="mobile-close" id="mobileClose">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+
+                    <li class="mobile-has-dropdown">
+                        <button class="mobile-dropdown-toggle">
+                            Fashion Design <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="Fashion-Master.html">Master Diploma in Fashion Design</a></li>
+                            <li><a href="Fashion-Professional-CAD.html">Professional in Fashion CAD</a></li>
+                            <li><a href="Fashion-Professional.html">Professional in Fashion design</a></li>
+                            <li><a href="Fashion-Diploma-Digital.html" class="active">Diploma in Digital Fashion</a></li>
+                            <li><a href="Fashion-Digital-Certificate.html">Certificate Course on Digital Fashion</a></li>
+                            <li><a href="Fashion-Dress-Making.html">Certificate Course on Dress Making</a></li>
+                            <li><a href="Fashion-Certificate-Image-Editing.html">Certificate Course in Image Editing</a></li>
+                            <li><a href="Fashion-Certificate-Digital-Illustration.html">Certificate Course in Digital Illustration</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button onclick="openEnrollmentPopup()" class="mobile-contact-btn">Enquiry Now</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="course-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-nav"
+                style="margin-bottom: 20px; font-size: 14px; color: rgba(255,255,255,0.9); display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; width: 100%;">
+                <a href="home.html" style="color: white; text-decoration: none;">Home</a>
+                <span style="margin: 0 8px;">&gt;</span>
+                <span style="color: white;">Fashion Design</span>
+                <span style="margin: 0 8px;">&gt;</span>
+                <span style="color: #ffcccc; font-weight: 600;">Diploma in Digital Fashion Design</span>
+            </div>
+
+            <h1 style="max-width: 900px;">Diploma in Digital Fashion</h1>
+            <p style="font-size: 20px; max-width: 700px; margin: 0 0 30px; line-height: 1.6;">Build a strong foundation
+                in digital fashion design with CLO 3D, Photoshop, and Illustrator fundamentals.</p>
+            <button onclick="openEnrollmentPopup('Register Now')" class="btn btn-primary"
+                style="padding: 15px 40px; font-size: 18px; text-transform: uppercase; letter-spacing: 1px;">Register
+                Now</button>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <div class="container">
+        <div class="highlights-bar">
+            <div class="row"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="highlight-item">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="highlight-icon"
+                        style="margin: 0 auto 10px;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span class="highlight-value">200 Hours</span>
+                    <span class="highlight-label">Course Duration</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="highlight-icon"
+                        style="margin: 0 auto 10px;">
+                        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                    <span class="highlight-value">EMI Options</span>
+                    <span class="highlight-label">Finance Support Available</span>
+                </div>
+                <div class="highlight-item">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="highlight-icon"
+                        style="margin: 0 auto 10px;">
+                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <path d="M6 12h.01M18 12h.01"></path>
+                    </svg>
+                    <span class="highlight-value">6 Lakhs</span>
+                    <span class="highlight-label">Average Salary Potential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Overview -->
+    <section style="padding-top: 40px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="section-header">
+                
+                <h2 class="section-title">Master Digital Fashion Tools</h2>
+            </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; align-items: center;">
+                <div>
+                    <p style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        The Diploma in Digital Fashion is designed to give students a strong foundation in digital
+                        design tools used in today’s fashion industry. This program covers the fundamentals of CLO 3D
+                        software, helping learners understand digital garment visualization and basic 3D design
+                        techniques.
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        Along with CLO 3D, the course also introduces students to fashion-focused Photoshop and
+                        Illustrator skills, enabling them to create digital illustrations, edit images, and develop
+                        fashion graphics.
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/images/landing-demo/fashion-diploma-digital-hero.png" alt="Digital Fashion Design"
+                        style="width: 85%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules -->
+    <section style="background: #f9f9f9; padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                
+                <h2 class="section-title">What You Will Learn</h2>
+            </div>
+            <ul class="module-list">
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> Fabric Print & Surface Design</li>
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> 2D Pattern Making</li>
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> Fabric & Material Application</li>
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> Garment Rendering</li>
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> Fashion Flats & Technical Drawings</li>
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> 3D Garment Simulation</li>
+                <li class="module-item"><i class="ri-checkbox-circle-fill"></i> Avatar Customization</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Career & Scope & Who Should Apply -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; align-items: start;">
+                <!-- Career -->
+                <div>
+                    <h3 style="font-size: 28px; font-weight: 700; margin-bottom: 20px;">Career and Scope</h3>
+                    <p style="color: #666; margin-bottom: 30px;">Upon completing the Diploma in Digital Fashion course,
+                        graduates can look forward to placement opportunities in the following roles:</p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                        <div class="career-card">3D Garment Designer</div>
+                        <div class="career-card">Fashion Designers</div>
+                        <div class="career-card">Technical Designer</div>
+                    </div>
+                </div>
+                <!-- Who Should Apply -->
+                <div>
+                    <h3 style="font-size: 28px; font-weight: 700; margin-bottom: 20px;">Who should apply?</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="margin-bottom: 20px; display: flex; gap: 15px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                            <i class="ri-t-shirt-air-line" style="color: #9c27b0; font-size: 20px;"></i>
+                            <span>Aspire to become professional fashion designers</span>
+                        </li>
+                        <li
+                            style="margin-bottom: 20px; display: flex; gap: 15px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                            <i class="ri-lightbulb-flash-line" style="color: #9c27b0; font-size: 20px;"></i>
+                            <span>Have a passion for creativity and innovation in fashion</span>
+                        </li>
+                        <li
+                            style="margin-bottom: 20px; display: flex; gap: 15px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                            <i class="ri-book-read-line" style="color: #9c27b0; font-size: 20px;"></i>
+                            <span>Seek a comprehensive education in fashion design</span>
+                        </li>
+                        <li
+                            style="margin-bottom: 20px; display: flex; gap: 15px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                            <i class="ri-store-2-line" style="color: #9c27b0; font-size: 20px;"></i>
+                            <span>Desire to launch their own fashion label or start a business</span>
+                        </li>
+                        <li
+                            style="margin-bottom: 20px; display: flex; gap: 15px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                            <i class="ri-rocket-line" style="color: #9c27b0; font-size: 20px;"></i>
+                            <span>Wish to enhance their existing fashion design skills</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Covered -->
+    <section style="background: #0f172a; color: white; padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                
+                <h2 class="section-title" style="color: white;">Software and Tools Covered</h2>
+                <p class="section-subtitle" style="color: #aaa;">This diploma introduces students to industry-standard
+                    software.</p>
+            </div>
+            <div class="tools-grid">
+                <!-- Photoshop -->
+                <div class="tool-item"
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <svg width="60" height="60" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="44" height="44" rx="8" fill="#001E36" />
+                        <text x="10" y="34" font-family="Arial" font-weight="bold" font-size="24"
+                            fill="#00C8FF">Ps</text>
+                    </svg>
+                    <h4 style="color: #333; margin-top: 15px;">Adobe Photoshop</h4>
+                </div>
+
+                <!-- CLO 3D -->
+                <div class="tool-item"
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#2D2D2D" />
+                        <path d="M30 50 L50 20 L70 50 L50 80 Z" fill="#4B9CD3" />
+                    </svg>
+                    <h4 style="color: #333; margin-top: 15px;">CLO 3D</h4>
+                </div>
+
+                <!-- Adobe Illustrator -->
+                <div class="tool-item"
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <svg width="60" height="60" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="44" height="44" rx="8" fill="#310000" />
+                        <text x="12" y="34" font-family="Arial" font-weight="bold" font-size="24"
+                            fill="#FF7C00">Ai</text>
+                    </svg>
+                    <h4 style="color: #333; margin-top: 15px;">Adobe Illustrator</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Courses Section -->
+    <section class="related-courses" style="padding: 60px 0; background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                
+                <h2 class="section-title">Related Fashion Design Courses</h2>
+            </div>
+
+            <div class="row"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Course Card 1 -->
+                <div class="course-card"
+                    style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                    <div class="course-img" style="height: 200px; overflow: hidden; border-bottom: 5px solid #e91e63;">
+                        <img src="assets/images/landing-demo/fashion-master-hero.png" alt="Master Diploma
+                            in Fashion" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div class="course-content" style="padding: 25px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #333;">Master Diploma
+                            in Fashion</h3>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Comprehensive fashion design...
+                        </p>
+                        <a href="Fashion-Master.html" class="btn btn-outline"
+                            style="color: #e91e63; border: 1px solid #e91e63; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600;">View
+                            Details</a>
+                    </div>
+                </div>
+                <!-- Course Card 2 -->
+                <div class="course-card"
+                    style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                    <div class="course-img" style="height: 200px; overflow: hidden; border-bottom: 5px solid #e91e63;">
+                        <img src="assets/images/landing-demo/fashion-digital-certificate-hero.png" alt="Certificate in
+                            Digital Fashion" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div class="course-content" style="padding: 25px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #333;">Certificate in
+                            Digital Fashion</h3>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Intro to CLO 3D and digital
+                            tools...</p>
+                        <a href="Fashion-Digital-Certificate.html" class="btn btn-outline"
+                            style="color: #e91e63; border: 1px solid #e91e63; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600;">View
+                            Details</a>
+                    </div>
+                </div>
+                <!-- Course Card 3 -->
+                <div class="course-card"
+                    style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                    <div class="course-img" style="height: 200px; overflow: hidden; border-bottom: 5px solid #e91e63;">
+                        <img src="assets/images/landing-demo/fashion-dress-making-hero.png" alt="Certificate in
+                            Dress Making" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div class="course-content" style="padding: 25px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #333;">Certificate in
+                            Dress Making</h3>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Pattern making and sewing...</p>
+                        <a href="Fashion-Dress-Making.html" class="btn btn-outline"
+                            style="color: #e91e63; border: 1px solid #e91e63; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600;">View
+                            Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/logo.png" alt="Dreamzone" class="footer-logo">
+                    <p>Transforming passion into profession through world-class design education.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="home.html#explore-courses">Courses</a></li>
+                        <li><a href="#" onclick="openGalleryPopup(); return false;">Gallery</a></li>
+                        <li><a href="#" onclick="openContactPopup(); return false;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="ri-map-pin-line"></i> Velachery, Chennai</li>
+                        <li><i class="ri-phone-line"></i> +91 9994355699</li>
+                        <li><i class="ri-mail-line"></i> velacherydz@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/184DRQvqsW/" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/dreamzone.velachery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a>
+                        <a href="https://www.linkedin.com/company/dreamzone-velachery/" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dreamzone Velachery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enrollment Popup Copy -->
+    <div id="enrollmentPopup" class="registration-modal">
+        <div class="registration-overlay" onclick="closeEnrollmentPopup()"></div>
+        <div class="registration-content">
+            <button class="registration-close" onclick="closeEnrollmentPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="registration-header">
+                <i class="ri-question-answer-line"></i>
+                <h2>Enquiry Form</h2>
+                <p>Please fill in your details to enquire with us</p>
+            </div>
+            <form id="enrollForm" class="registration-form" onsubmit="handleEnrollSubmit(event)">
+                <div class="form-group">
+                    <label for="enrollName">Full Name *</label>
+                    <input type="text" id="enrollName" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="enrollEmail">Email Address *</label>
+                    <input type="email" id="enrollEmail" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="enrollPhone">Phone Number *</label>
+                    <input type="tel" id="enrollPhone" name="phone" required placeholder="Enter your phone number"
+                        pattern="[0-9]{10}">
+                </div>
+                <!-- Updated course options for this page -->
+                <div class="form-group">
+                    <label for="enrollCourse">Interested Course *</label>
+                    <select id="enrollCourse" name="course" required>
+                        <option value="Diploma in Digital Fashion" selected>Diploma in Digital Fashion</option>
+                        <option value="Professional in Fashion CAD">Professional in Fashion CAD</option>
+                        <option value="Fashion Design">Fashion Design (Other)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">
+                    Submit Enquiry <i class="ri-send-plane-fill"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification">
+        <div class="toast-icon">
+            <i class="ri-checkbox-circle-fill"></i>
+        </div>
+        <div class="toast-content">
+            <h4>Success!</h4>
+            <p id="toastMessage">Your request has been submitted successfully</p>
+        </div>
+        <button class="toast-close" onclick="closeToast()">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/home.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919994355699" target="_blank" class="whatsapp-float">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-green 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .whatsapp-float i {
+            margin-top: 2px; /* Slight optical adjustment */
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+    <!-- Contact Us Popup -->
+    <div id="contactPopup" class="contact-modal">
+        <div class="contact-overlay" onclick="closeContactPopup()"></div>
+        <div class="contact-content">
+            <button class="contact-close" onclick="closeContactPopup()">
+                <i class="ri-close-line"></i>
+            </button>
+            
+            <!-- Left Side - Gradient Panel -->
+            <div class="contact-left">
+                <div class="contact-icon">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <h2>Get In Touch</h2>
+                <p>We''d love to hear from you! Reach out to us for any queries about our courses.</p>
+                
+                <div class="contact-info-item">
+                    <i class="ri-map-pin-line"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>Velachery, Chennai</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <i class="ri-phone-line"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+919994355699">+91 9994355699</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <i class="ri-mail-line"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:velacherydz@gmail.com">velacherydz@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <h4>Follow Us</h4>
+                    <div class="contact-social-links">
+                        <a href="https://www.facebook.com/share/184DRQvqsW/" target="_blank" aria-label="Facebook">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dreamzone.velachery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreamzone-velachery/" target="_blank" aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Map & Hours -->
+            <div class="contact-right">
+                <h3>Find Us Here</h3>
+                <p>Visit our campus in Velachery, Chennai</p>
+                
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d80.2!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA4MMKwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="contact-hours">
+                    <h4>Working Hours</h4>
+                    <p><strong>Monday - Sunday:</strong> 09:00 AM - 06:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Gallery Popup Modal - Google Photos Style -->
+<div id="galleryPopup" class="gallery-modal">
+    <!-- Header -->
+    <div class="gallery-modal-header">
+        <div class="gallery-modal-title">
+            <h2>Dreamzone Velachery</h2>
+        </div>
+        <button class="gallery-modal-close" onclick="closeGalleryPopup()">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+    <!-- Main Body -->
+    <div class="gallery-modal-body">
+        <!-- Left Sidebar - Thumbnails -->
+        <div class="gallery-sidebar">
+            <div class="gallery-thumbnail active" onclick="showGalleryImage(0)" data-index="0">
+                <img src="assets/images/gallery/gallery-1.jpg" alt="Creative Learning Space">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(1)" data-index="1">
+                <img src="assets/images/gallery/gallery-2.jpg" alt="Design Studio">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(2)" data-index="2">
+                <img src="assets/images/gallery/gallery-3.jpg" alt="Campus Environment">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(3)" data-index="3">
+                <img src="assets/images/gallery/gallery-4.jpg" alt="Learning Hub">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(4)" data-index="4">
+                <img src="assets/images/gallery/gallery-5.jpg" alt="Training Facility">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(5)" data-index="5">
+                <img src="assets/images/gallery/gallery-6.jpg" alt="Creative Workshop">
+            </div>
+            <div class="gallery-thumbnail" onclick="showGalleryImage(6)" data-index="6">
+                <img src="assets/images/gallery/gallery-7.jpg" alt="Student Zone">
+            </div>
+        </div>
+
+        <!-- Right Side - Main Viewer -->
+        <div class="gallery-viewer">
+            <button class="gallery-nav-btn gallery-nav-prev" onclick="navigateGallery(-1)">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+
+            <img id="galleryMainImage" class="gallery-viewer-image" src="assets/images/gallery/gallery-1.jpg"
+                alt="Gallery Image">
+
+            <button class="gallery-nav-btn gallery-nav-next" onclick="navigateGallery(1)">
+                <i class="ri-arrow-right-s-line"></i>
+            </button>
+
+            <div class="gallery-image-info">
+                <h3 id="galleryImageTitle">Creative Learning Space</h3>
+                <p id="galleryImageDesc">State-of-the-art facilities for design education</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Gallery Popup Functions - Google Photos Style
+    const galleryData = [
+        {
+            src: 'assets/images/gallery/gallery-1.jpg',
+            title: 'Creative Learning Space',
+            desc: 'State-of-the-art facilities for design education'
+        },
+        {
+            src: 'assets/images/gallery/gallery-2.jpg',
+            title: 'Design Studio',
+            desc: 'Professional workspace for aspiring designers'
+        },
+        {
+            src: 'assets/images/gallery/gallery-3.jpg',
+            title: 'Campus Environment',
+            desc: 'Modern infrastructure for creative minds'
+        },
+        {
+            src: 'assets/images/gallery/gallery-4.jpg',
+            title: 'Learning Hub',
+            desc: 'Collaborative spaces for innovation'
+        },
+        {
+            src: 'assets/images/gallery/gallery-5.jpg',
+            title: 'Training Facility',
+            desc: 'Equipped with latest design tools'
+        },
+        {
+            src: 'assets/images/gallery/gallery-6.jpg',
+            title: 'Creative Workshop',
+            desc: 'Hands-on learning experience'
+        },
+        {
+            src: 'assets/images/gallery/gallery-7.jpg',
+            title: 'Student Zone',
+            desc: 'Inspiring environment for creativity'
+        }
+    ];
+
+    let currentGalleryIndex = 0;
+
+    function openGalleryPopup(startIndex = 0) {
+        const modal = document.getElementById('galleryPopup');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        showGalleryImage(startIndex);
+    }
+
+    function closeGalleryPopup() {
+        const modal = document.getElementById('galleryPopup');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showGalleryImage(index) {
+        currentGalleryIndex = index;
+        const data = galleryData[index];
+
+        // Update main image
+        const mainImage = document.getElementById('galleryMainImage');
+        mainImage.src = data.src;
+
+        // Update info
+        document.getElementById('galleryImageTitle').textContent = data.title;
+        document.getElementById('galleryImageDesc').textContent = data.desc;
+
+        // Update active thumbnail
+        document.querySelectorAll('.gallery-thumbnail').forEach((thumb, i) => {
+            if (i === index) {
+                thumb.classList.add('active');
+                // Scroll thumbnail into view
+                thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+                thumb.classList.remove('active');
+            }
+        });
+    }
+
+    function navigateGallery(direction) {
+        let newIndex = currentGalleryIndex + direction;
+
+        if (newIndex < 0) {
+            newIndex = galleryData.length - 1;
+        } else if (newIndex >= galleryData.length) {
+            newIndex = 0;
+        }
+
+        showGalleryImage(newIndex);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+        const modal = document.getElementById('galleryPopup');
+        if (modal && modal.classList.contains('active')) {
+            if (e.key === 'Escape') {
+                closeGalleryPopup();
+            } else if (e.key === 'ArrowLeft') {
+                navigateGallery(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateGallery(1);
+            }
+        }
+    });
+</script>
+</body>
+
+</html>

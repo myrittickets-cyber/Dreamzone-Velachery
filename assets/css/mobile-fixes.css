@@ -1,0 +1,75 @@
+/* Mobile & Layout Fixes for Dreamzone */
+
+/* 1. Ensure the On-Page Registration Section is Full Width and Not Constrained */
+section.registration-section .registration-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    display: block !important;
+    /* Override generic grid/flex if set */
+}
+
+/* 2. Reset the Header to be simple (if it inherited modal styles) */
+section.registration-section .registration-header {
+    background: transparent !important;
+    padding: 0 0 50px 0 !important;
+    border-radius: 0 !important;
+    min-height: auto !important;
+    color: inherit !important;
+}
+
+section.registration-section .registration-header::before {
+    display: none !important;
+    /* Remove animated background */
+}
+
+section.registration-section .registration-header i {
+    display: none !important;
+    /* Remove big icon if present */
+}
+
+section.registration-section .registration-header h2 {
+    color: #333 !important;
+    /* Dark text */
+    font-size: 36px !important;
+}
+
+section.registration-section .registration-header p {
+    color: #666 !important;
+}
+
+/* 3. Force 3-Column Grid for the Courses List on Desktop */
+section.registration-section .courses-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+}
+
+/* 4. Style the Course Categories (Cards) */
+section.registration-section .course-category {
+    background: #fff !important;
+    padding: 30px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    height: 100% !important;
+    /* Equal height */
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 991px) {
+    section.registration-section .courses-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    section.registration-section .courses-list {
+        grid-template-columns: 1fr !important;
+    }
+}

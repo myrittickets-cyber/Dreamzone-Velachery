@@ -1,0 +1,77 @@
+/* About Page Specific Styles */
+
+/* Testimonial Card - Speech Bubble Design */
+.testimonial-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    /* Slightly sharper corners as per image */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    position: relative;
+    margin-bottom: 20px;
+    /* Space for the tail */
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* The Speech Bubble Tail */
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #fff transparent transparent transparent;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.05));
+    /* Try to match shadow, tricky with spacing */
+}
+
+/* Header: Avatar + Info */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.testimonial-avatar {
+    width: 55px;
+    height: 55px;
+    background-color: #C4C4C4;
+    /* Gray placeholder color */
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    /* Square with slight radius */
+}
+
+.testimonial-info h4 {
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.testimonial-info span {
+    color: #5d5dff;
+    /* Blue color for role */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Quote Text */
+.testimonial-text {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: normal;
+    /* Image shows normal text */
+}
